@@ -62,3 +62,6 @@ button { border: 0; }
 .mb40 { margin-bottom: 40px !important; } 
 .mb50 { margin-bottom: 50px !important; } 
 .mb100 { margin-bottom: 100px !important; } 
+.pa{position:absolute;}
+.pr{position: relative;}
+.df{display: flex;}

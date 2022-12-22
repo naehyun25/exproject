@@ -1,43 +1,248 @@
 @charset "utf-8"; /* layout */
-[class*="_cover"] { width: 100%; max-width: 1400px; margin: auto; } 
+[class*="_cover"] {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+}
 /* []속성선택자 : 클래스 중에서 클래스이름이 _cover 를 포함한 모든(*) 클래스 */
-[class*="_cover"] { height: inherit; } 
+[class*="_cover"] {
+  height: inherit;
+}
 
 /* #header */
-#header { width: 100%; height: 90px; position: relative; font-size: 1.3rem; background-color: #ddd; } 
-#header .logo { width: 10%; height: 100%; } 
-.logo a { display: block; width: 100%; height: 100%; } 
+#header {
+  width: 100%;
+  height: 90px;
+  position: relative;
+  font-size: 1.3rem;
+  background-color: #ddd;
+}
+#header .logo {
+  width: 10%;
+  height: 100%;
+}
+.logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 /* 너비최대 140px 높이 90px*/
-.logo a img { display: block; width: 80%; margin: auto; padding-top: 17px; } 
-#header .nav { display: flex; width: 50%; margin: 0 10%; } 
-.nav li { width: 20%; text-align: center; line-height: 90px; } 
-.nav a { display: block; width: 100%; height: 100%; color: black; font-weight: 700; position: relative; } 
-/* 마우스 호버 시 아래쪽 줄 넣는거 가상선택자로 넣을려고 */
-.nav a::before { content: ""; display: block; width: 0%; height: 2px; background-color: #1634dd; bottom: 0; position: absolute; transition: width 0.8s; } 
-.nav a:hover:before { width: 100%; } 
+.logo a img {
+  display: block;
+  width: 80%;
+  margin: auto;
+  padding-top: 17px;
+}
+#header .nav {
+  display: flex;
+  width: 50%;
+  margin: 0 10%;
+}
+.nav li {
+  width: 20%;
+  text-align: center;
+  line-height: 90px;
+}
+.nav a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: black;
+  font-weight: 700;
+  position: relative;
+}
+/* 마우스 호버 시 아래쪽 줄 넣는거 나중에 스크립트로 넣을예정이라 nav li a안에 .line심어줌
+가상선택자로 할 경우 스크립트로 제어하기 힘들어서 */
+.nav .line {
+  width: 0%;
+  height: 2px;
+  background-color: #1634dd;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  transition: width 0.8s;
+}
+.nav a:hover .line {
+  width: 100%;
+}
 /* transition은 before 에다가넣어야함 hover 에 넣으면 갔다가 없어짐(100에서 0으로 안돌아옴 호버는 마우스 올렸을때만 되는거니까)*/
-#header .gnb { display: flex; width: 20%; } 
-.gnb li { font-size: 1.4rem; width: 100%; } 
-.gnb li:nth-child(1) a { background: url(../images/ico_lang.png) no-repeat 0 50%/30%; } 
-.gnb li a { display: block; width: 100%; height: 100%; line-height: 90px; text-align: center; color: #000; } 
-.gnb li a img { width: 40px; vertical-align: middle; } 
+/* .mo_menu */
+.mo_menu {
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    left: 0;
+    top: 100%;
+    z-index: 99999;
+    display: none;
+  }
+  #header .mo {
+    display: none;
+    float: right;
+    padding-right: 20px;
+    line-height: 90px;
+  }
+  .mo span {
+    font-size: 3rem;
+  }
+  .mo_menu ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 50%;
+    margin: auto;
+  }
+/* pc full_menu */
+#header .full_menu {
+  top: 100%;
+  width: 100%;
+  height: 450px;
+  border-top: 1px solid #c1c1c1;
+  box-sizing: border-box;
+  z-index: 99999;
+  background-color: #fff;
+  display: none;
+}
+.full_cover {
+  width: 100%;
+  margin: 0 auto;
+}
+.full_menu .full_cover > ul > li:last-child {
+  border-right: 1px solid #c1c1c1;
+}
+.full_menu .full_cover > ul > li {
+  width: 20%;
+  max-width: 140px;
+  height: 450px;
+  border-left: 1px solid #c1c1c1;
+  box-sizing: border-box;
+}
+.full_menu .full_cover > ul {
+  width: 60%;
+  height: 100%;
+  margin-left: 20px;
+}
+.full_cover ul ul {
+  width: 100%;
+}
+.full_menu .full_cover > ul ul li {
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+}
+.full_menu .full_cover > ul ul li a {
+  position: relative;
+  color: #000;
+}
+.full_menu .full_cover > ul ul li a:after {
+  content: "";
+  position: absolute;
+  background-color: #1634db;
+  transition: all 0.5s;
+  left: 0;
+  width: 0;
+  height: 1px;
+  bottom: -5px;
+}
+.full_menu .full_cover > ul ul li a:hover:after {
+  width: 100%;
+}
+
+
+#header .gnb {
+  display: flex;
+  width: 20%;
+}
+.gnb li {
+  font-size: 1.4rem;
+  width: 100%;
+}
+.gnb li:nth-child(1) a {
+  background: url(../images/ico_lang.png) no-repeat 0 50%/30%;
+}
+.gnb li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 90px;
+  text-align: center;
+  color: #000;
+}
+.gnb li a img {
+  width: 40px;
+  vertical-align: middle;
+}
 /* 현재 gnb 가 float : right 가 되어있는 상태인데 flex없으면 li 가 또 float 되면 순서가 뒤집어짐 */
 
 /* main-slide */
-#main_slide { position: relative; width: 100%; height: 800px; overflow:hidden;  } 
-    /* #main_slide .slide_cover { max-width: 100%; } 
+#main_slide {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+}
+/* #main_slide .slide_cover { max-width: 100%; } 
     #main_slide .slide_cover img { width: 100%; }  */
-    #main_slide .slide_cover {position:relative; overflow:hidden;}
-   
-    /* #main_slide .slide_cover ul{width: 100%; height: 800px;} 
+#main_slide .slide_cover {
+  position: relative;
+  overflow: hidden;
+}
+
+/* #main_slide .slide_cover ul{width: 100%; height: 800px;} 
     #main_slide .slide_cover ul li{width: 100%; height: 800px; }  */
-    /* 나중에 슬라이드 줄때 ul, li 이용해서 처리 할 예정 */
-    /* #main_slide .slide_cover ul li a{display: block; width: 100%; height: 100%;position: relative;}  */
-    #main_slide .slide_cover h2,
-    #main_slide .slide_cover img,
-    #main_slide .slide_cover p{position:absolute;}
-    #main_slide .slide_cover ul li h2{ color:#fff; font-size
-    :6rem; line-height:1.2; top:15%; left:10%; width: 480px; word-break:keep-all; 
-    z-index:1; }
-    #main_slide .slide_cover ul li a p{ bottom: 0%; right: 10%; color:#fff; font-size:2.4rem;}  
-    #main_slide .slide_cover img {height: 100%;}
+/* 나중에 슬라이드 줄때 ul, li 이용해서 처리 할 예정 */
+/* #main_slide .slide_cover ul li a{display: block; width: 100%; height: 100%;position: relative;}  */
+#main_slide .slide_cover h2,
+#main_slide .slide_cover img,
+#main_slide .slide_cover p {
+  position: absolute;
+}
+#main_slide .slide_cover ul li h2 {
+  color: #fff;
+  font-size: 6rem;
+  line-height: 1.2;
+  top: 15%;
+  left: 10%;
+  width: 480px;
+  word-break: keep-all;
+  z-index: 1;
+}
+#main_slide .slide_cover ul li a p {
+  bottom: 0%;
+  right: 10%;
+  color: #fff;
+  font-size: 2.4rem;
+}
+#main_slide .slide_cover img {
+  height: 100%;
+}
+
+/*===========
+     mediaQuery
+     =========== */
+@media screen and (max-width: 1330px) {
+  #header {
+    height: auto;
+  }
+  .header_cover {
+    display: flex;
+  }
+  .header_cover .logo {
+    float: none;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  #header .full_menu {
+    display: none;
+  }
+  #header .nav {
+    display: none;
+  }
+  #header .gnb {
+    display: none;
+  }
+  #header .mo {
+    display: block;
+    float: none;
+  }
+}
