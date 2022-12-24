@@ -67,7 +67,7 @@
 }
 /* transition은 before 에다가넣어야함 hover 에 넣으면 갔다가 없어짐(100에서 0으로 안돌아옴 호버는 마우스 올렸을때만 되는거니까)*/
 /* .mo_menu */
-.mo_menu {
+.header_cover .mo_menu {
     position: absolute;
     width: 100%;
     background-color: white;
