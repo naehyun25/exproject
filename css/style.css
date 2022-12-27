@@ -5,17 +5,18 @@
   margin: auto;
 }
 /* []속성선택자 : 클래스 중에서 클래스이름이 _cover 를 포함한 모든(*) 클래스 */
-[class*="_cover"] {
+/* [class*="_cover"] {
   height: inherit;
-}
-
+}->높이값은 컨텐츠 따라가게 처리함 */
+/* link스타일정의 */
+a{font-size: 1.6rem;}
 /* #header */
 #header {
   width: 100%;
   height: 90px;
   position: relative;
   font-size: 1.3rem;
-  background-color: #ddd;
+  background-color: #fff;
 }
 #header .logo {
   width: 10%;
@@ -173,76 +174,28 @@
   vertical-align: middle;
 }
 /* 현재 gnb 가 float : right 가 되어있는 상태인데 flex없으면 li 가 또 float 되면 순서가 뒤집어짐 */
+.gnb li a img.leave{display:inline-block;}
+.gnb li a img.hover{display:none;}
+.gnb li a:hover img.leave{display:none;}
+.gnb li a:hover img.hover{display:inline-block; transform:scale(1.1);}
+
 
 /* main-slide */
-#main_slide {
-  position: relative;
-  width: 100%;
-  height: 800px;
-  overflow: hidden;
+#main_slide{position:relative; width:100; height:800px;}
+#main_slide>.slide_cover{position:relative; width:90%; height:100%;}
+#main_slide>.slide_cover ul {position:relative; width:100%; height:100%}
+#main_slide>.slide_cover ul li{position:absolute; width:100%; height:100%; overflow:hidden;}
+#main_slide>.slide_cover ul li.on{z-index:6;}
+/* #main_slide>.slide_cover ul li:nth-child(1){z-index:5;} */
+#main_slide>.slide_cover ul li a{position:relative; display:block; background-color: red; width:100%; height:100%}
+#main_slide>.slide_cover ul li a h2.img_logo{position:absolute; top:15%; left:10%; color:#fff; font-size:6rem; width:480px; word-break:keep-all; opacity:0; transition:all 2s;letter-spacing: -3px; }
+#main_slide>.slide_cover ul li a h2.img_logo.on{top:10%; opacity:1;letter-spacing: -4px; }
+#main_slide>.slide_cover ul li a p.img_text{position:absolute; bottom:0; right:10%; color:#fff; font-size:2.4rem; width:400px; opacity:0; transition:all 2s;}
+#main_slide>.slide_cover ul li a p.img_text.on{bottom:15%; opacity:1;}
+#main_slide>.slide_cover ul li a .box{position:absolute; bottom:10%; left:55%; width:0; height:250px; background-color: #173beb; transition:all 1.5s;}
+#main_slide>.slide_cover ul li a .box.on{width:250px; animation: rotate 15s infinite linear;}
+@keyframes rotate{
+  0%{transform:rotate(0deg)}
+  100%{transform:rotate(45deg)}
 }
-/* #main_slide .slide_cover { max-width: 100%; } 
-    #main_slide .slide_cover img { width: 100%; }  */
-#main_slide .slide_cover {
-  position: relative;
-  overflow: hidden;
-}
-
-/* #main_slide .slide_cover ul{width: 100%; height: 800px;} 
-    #main_slide .slide_cover ul li{width: 100%; height: 800px; }  */
-/* 나중에 슬라이드 줄때 ul, li 이용해서 처리 할 예정 */
-/* #main_slide .slide_cover ul li a{display: block; width: 100%; height: 100%;position: relative;}  */
-#main_slide .slide_cover h2,
-#main_slide .slide_cover img,
-#main_slide .slide_cover p {
-  position: absolute;
-}
-#main_slide .slide_cover ul li h2 {
-  color: #fff;
-  font-size: 6rem;
-  line-height: 1.2;
-  top: 15%;
-  left: 10%;
-  width: 480px;
-  word-break: keep-all;
-  z-index: 1;
-}
-#main_slide .slide_cover ul li a p {
-  bottom: 0%;
-  right: 10%;
-  color: #fff;
-  font-size: 2.4rem;
-}
-#main_slide .slide_cover img {
-  height: 100%;
-}
-
-/*===========
-     mediaQuery
-     =========== */
-@media screen and (max-width: 1330px) {
-  #header {
-    height: auto;
-  }
-  .header_cover {
-    display: flex;
-  }
-  .header_cover .logo {
-    float: none;
-    margin: 0 auto;
-    padding: 20px 0;
-  }
-  #header .full_menu {
-    display: none;
-  }
-  #header .nav {
-    display: none;
-  }
-  #header .gnb {
-    display: none;
-  }
-  #header .mo {
-    display: block;
-    float: none;
-  }
-}
+#main_slide>.slide_cover ul li a .white_box{position:absolute; top:0; left:-100%; width:100%; height:100%; z-index:7; background-color:#fff;}

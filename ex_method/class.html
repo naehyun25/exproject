@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .last
+{
+	background: #900;
+}
+.on{background:pink; font-size:2em;}
+  </style>
+</head>
+<body>
+  <ul id="list">
+    <li>aaaaa</li>
+    <li>
+        <ul>
+            <li>bbbb</li>
+            <li>bbbb</li>
+            <li>bbbb</li>
+        </ul>
+    </li>
+    <li>ccccc</li>
+    <li>ccccc</li>
+  </ul>
+  <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+  <script>
+    $(function(){
+      $("#list").find(">li").css("border-bottom","1px solid").find(">ul").css("background-color","grey").find(">li").eq(1).css("color","white").animate({"margin-left":800},8000);
+      $("#list").find(">li").eq(2).mouseover(function(){
+        $("#list").find(">li").eq(2).addClass('on')
+      })
+      //.addClass('on')
+      $("#list").find(">li").eq(2).mouseleave(function(){
+        $("#list").find(">li").eq(2).removeClass('on')})
+
+    })
+  </script>
+</body>
+</html>

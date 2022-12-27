@@ -34,7 +34,64 @@ $(function () {
   $(".nav li").mouseleave(function(){
     $(this).find(".line").css("width","0%");
   })
-}); //jQuery
+  /**
+   * mainCarousel
+   * 시간마다 일시키는 timer
+   * 애니메이션효과를 갖고있는 slide
+   ***/
+
+  var i=0,k=null,repeat;
+  timer();
+  function timer(){
+    
+    setInterval(function(){
+      i++;
+      k=i-1;
+      if(i==3){i=0;}
+      // (i==3)?i=0:i;
+      console.log(i)
+      slide();
+    },5000);
+
+  }
+
+
+  function slide(){
+    //-100%->()1s-> 0%->(1s)->100%
+    $('.white_box').css("left","-100%").stop().animate({left:"0%"},1000,
+    function(){
+      $('.white_box').stop().animate({left:"100%"},1000)
+    });
+    $('.slide_cover ul li').eq(i).addClass('on');
+    $('.slide_cover ul li').eq(i).find('h2').addClass('on');
+    $('.slide_cover ul li').eq(i).find('.box1').addClass('on');
+    $('.slide_cover ul li').eq(i).find('p').addClass('on');
+    $('.slide_cover ul li').eq(i).find('a img').addClass('on');
+    $('.slide_cover ul li').eq(k).removeClass('on');
+    $('.slide_cover ul li a img').removeClass('on');
+    console.log("i=",i,"k=",k,)
+
+
+
+
+  }
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}); 
+//jQuery
 //slideDown안에 트랜지션등 여러가지 애니메이션 값이 있어서 마우스를 여러번왔다갔다하면
 //   계속 조금씩 지연하면서 하기 때문에 계속 오르락내리락 한다
 //그래서 .stop() 함수를 써준다-> 지금 지시받은 일이 있으면 멈추고 그것부터해

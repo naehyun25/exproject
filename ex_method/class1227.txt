@@ -1,0 +1,11 @@
+--jQuery
+효과method
+.animate
+탐색method
+.find
+.eq
+CSS
+.addClass
+.removeClass
+--JS시간제어함수
+setInterval

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{width:100px; height:100px; position:absolute; background:pink;}
+    .circle{width:100px; height:100px; border-radius: 50%; position:absolute; background:black;text-align: center; line-height: 100px;}
+
+  </style>
+  <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+  <script>
+$(function(){
+  //$("선택자").animate(속성[,시간][,가속도][,콜백함수])[써도되고 안써도되는 함수]
+  //속성은 transition 속성처럼 숫자로 바뀌는 애들은 다 바꿀수 있다.
+  //가속도랑 콜백함수는 나중에
+  //단위안쓰면 px , 다른 단위는 ""안에 써야함
+  //.delay 지연
+  function ani (){
+    $(".box").animate({left:"50%",top:100},500).delay(500).animate({left:0, top:0},1000)
+  }
+  function ani2 (){
+    $(".circle").animate({top:"80vh",rotate:"120deg"},1500).delay(500).animate({left:"80vw",rotate:"240deg"},1000).delay(800).animate({top:"50vh",left:"50vw",rotate:"300deg"},1000).delay(300).animate({top:0,left:0,rotate:"360deg"},300)
+  }
+  
+    //loop구현
+    //setInterval(할일, 시간-숫자로1/1000밀리초단위)-js 함수라 $표시안씀 window.은 생략했음
+    setInterval(ani,500)
+    setInterval(ani2,1000)
+
+})
+ 
+  </script>
+
+</head>
+
+<body>
+  <div class="box"></div>
+  <div class="circle">🤣</div>
+</body>
+</html>
