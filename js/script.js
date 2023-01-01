@@ -50,6 +50,7 @@ $(function () {
       if(i==3){i=0;}
       // (i==3)?i=0:i;
       console.log(i)
+      console.log(k)
       slide();
     },5000);
 
