@@ -296,5 +296,5 @@ max-width: none;}
 }
 .main_cursor .cursor_left:hover ~.cursor:before{opacity:1}
 .main_cursor .cursor_left:hover ~.cursor:after{opacity:0}
-.main_cursor .cursor_right:hover ~.cursor:before{opacity:1}
-.main_cursor .cursor_right:hover ~.cursor:after{opacity:0}
+.main_cursor .cursor_right:hover ~.cursor:before{opacity:0}
+.main_cursor .cursor_right:hover ~.cursor:after{opacity:1}
