@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="두산에 오신것을 환영합니다..">
+    <meta name="robot" content="index,follow">
+    <meta name="keyword" content="두산 포트폴리오">
+    <meta name="author" content="두산">
+    <meta property="og:title" content="두산, 윤내현:예제프로젝트">
+    <meta property="og:description" content="윤내현의 예제프로젝트입니다."> 
+    <meta property="og:url" content="http://naeh.dothome.co.kr/"> 
+    <meta property="og:type" content="website"> 
+    <meta property="og:image" content="./images/h1-logo.jpg">
+    <meta property="og:site_name" content="">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon.ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon.ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon.ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon.ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon.ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon.ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon.ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon.ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon.ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon.ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico/favicon-16x16.png">
+    <link rel="manifest" href="./favicon.ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon.ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- 파비콘 삽입 -->
+    <title>doosan-main-layout</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <style>
+        #layer{display:block;}
+        #layer{display:none;}
+    </style>
+    <!-- 라이브러리 코어 --><!-- 익스호환 -->
+    <script src='https://code.jquery.com/jquery-1.12.0.min.js'></script>
+    <!-- custom js -->
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/script_answer.js"></script>
+</head>
+<body>
+    <!-- <div id="layer">
+        <p>이 사이트는 학습용으로 제작하였으며 송파구청과 무관합니다. 구직용 포트폴리오로 상업적 목적이 없음을 알립니다.</p>
+        <button> 닫기</button>
+    </div> -->
+    <header id="header" class="pr">
+        <div class="header_cover cf">
+            <h1 class="logo fl">
+                <a href="#"><img src="images/h1-logo.png" alt="두산그룹로고"></a>
+            </h1>
+            <a class="mo" href="#">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+            </a>
+            <ul class="nav fl">
+                <li><a href="#">회사소개 <div class="line"></div></a></li>
+                <li><a href="#">사회책임경영 <div class="line"></div></a></li>
+                <li><a href="#">투자정보 <div class="line"></div></a></li>
+                <li><a href="#">미디어센터 <div class="line"></div></a></li>
+                <li><a href="#">채용 <div class="line"></div></a></li>
+            </ul>
+            <div class="mo_menu">
+                <ul class="df">
+                    <li><a href="#">회사소개 <div class="line"></div></a><!-- //dep1 -->
+                        <ul>
+                            <li><a href="#">두산스토리</a></li>
+                            <li><a href="#">두산의 활약상</a></li>
+                            <li><a href="#">목표와 핵심가치</a></li>
+                            <li><a href="#">경영전략</a></li>
+                            <li><a href="#">리더쉽</a></li>
+                            <li><a href="#">기술과 혁신</a></li>
+                            <li><a href="#">계열사</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">사회책임경영<div class="line"></div></a><!-- //dep1 -->
+                        <ul>
+                            <li><a href="#">개요</a></li>
+                            <li><a href="#">윤리경영</a></li>
+                            <li><a href="#">상생협력</a></li>
+                            <li><a href="#">EHS</a></li>
+                            <li><a href="#">사회공헌</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">투자정보<div class="line"></div></a><!-- //dep1 -->
+                        <ul>
+                            <li><a href="#">IR자료</a></li>
+                            <li><a href="#">거버넌스</a></li>
+                            <li><a href="#">보고서</a></li>
+                            <li><a href="#">주가정보</a></li>
+                            <li><a href="#">공시</a></li>
+                            <li><a href="#">전자공고</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">미디어센터<div class="line"></div></a><!-- //dep1 -->
+                        <ul>
+                            <li><a href="#">두산뉴스룸</a></li>
+                            <li><a href="#">캠페인 &amp; PR영상</a></li>
+                            <li><a href="#">메뉴얼 브로슈어</a></li>
+                        </ul>
+                    </li>
+                    <li> <a href="#">채용<div class="line"></div></a><!-- //dep1 -->
+                        <ul>
+                            <li><a href="#">두산의 인재,두산인</a></li>
+                            <li><a href="#">커리어두산</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- //.mo_menu -->
+            <div class="pc full_menu pa">
+                <div class="full_cover">
+                    <ul class="df">
+                        <li><!-- //dep1 -->
+                            <ul>
+                                <li><a href="#">두산스토리</a></li>
+                                <li><a href="#">두산의 활약상</a></li>
+                                <li><a href="#">목표와 핵심가치</a></li>
+                                <li><a href="#">경영전략</a></li>
+                                <li><a href="#">리더쉽</a></li>
+                                <li><a href="#">기술과 혁신</a></li>
+                                <li><a href="#">계열사</a></li>
+                            </ul>
+                        </li>
+                        <li><!-- //dep1 -->
+                            <ul>
+                                <li><a href="#">개요</a></li>
+                                <li><a href="#">윤리경영</a></li>
+                                <li><a href="#">상생협력</a></li>
+                                <li><a href="#">EHS</a></li>
+                                <li><a href="#">사회공헌</a></li>
+                            </ul>
+                        </li>
+                        <li><!-- //dep1 -->
+                            <ul>
+                                <li><a href="#">IR자료</a></li>
+                                <li><a href="#">거버넌스</a></li>
+                                <li><a href="#">보고서</a></li>
+                                <li><a href="#">주가정보</a></li>
+                                <li><a href="#">공시</a></li>
+                                <li><a href="#">전자공고</a></li>
+                            </ul>
+                        </li>
+                        <li><!-- //dep1 -->
+                            <ul>
+                                <li><a href="#">두산뉴스룸</a></li>
+                                <li><a href="#">캠페인 &amp; PR영상</a></li>
+                                <li><a href="#">메뉴얼 브로슈어</a></li>
+                            </ul>
+                        </li>
+                        <li><!-- //dep1 -->
+                            <ul>
+                                <li><a href="#">두산의 인재,두산인</a></li>
+                                <li><a href="#">커리어두산</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="gnb fr">
+                <li><a href="#">한국어</a></li>
+                <li><a href="#"><img src="images/ico_search.png" alt="검색" class="leave">
+                    <img src="images/ico_search_on.png" alt="검색" class="hover"></a></li>
+                <li><a href="#"><img src="images/btn_gnb_right-menu.png" alt="" class="leave">
+                    <img src="images/btn_gnb_right_menu_over.png" alt="" class="hover"></a></li>
+            </ul>
+        </div>
+    </header>
+    <section id="main_slide">
+        <div class="slide_cover">
+            <ul>
+                <!-- 한장의 슬라이드그룹 -->
+                <li>
+                    <a href="#">
+                        <img src="images/main1.jpg" alt="" class="pc">
+                        <img src="images/main1_mo.jpg" alt="" class="mo">
+                        <h2 class="img_logo">두산은 지금<br> 내일을 준비합니다.</h2>
+                        <span class="box box1"></span>
+                        <p class="img_text">세계곳곳에서 인류의 더 나은 삶을 위해 두산은 지금 미래를 준비합니다.</p>
+                        <span class="white_box"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/main2.jpg" alt="" class="pc"><img src="imgit ages/main2_mo.jpg" alt="" class="mo">
+                        <h2 class="img_logo">두산은 지금<br> 내일을 준비합니다.</h2>
+                        <span class="box box2"></span>
+                        <p class="img_text">세계곳곳에서 인류의 더 나은 삶을 위해 두산은 지금 미래를 준비합니다.</p>
+                        <span class="white_box"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/main3.jpg" alt="" class="pc"><img src="images/main3_mo.jpg" alt="" class="mo">
+                        <h2 class="img_logo">두산은 지금<br> 내일을 준비합니다.</h2>
+                        <span class="box box3"></span>
+                        <p class="img_text">세계곳곳에서 인류의 더 나은 삶을 위해 두산은 지금 미래를 준비합니다.</p>
+                        <span class="white_box"></span>
+                    </a>
+                </li>
+            </ul>
+        </div><!-- //.slide cover -->
+        <div class="slide_btn">
+            <ul>
+                <li><a href=""><span class="color on"></span></a></li>
+                <li><a href=""><span class="color"></span></a></li>
+                <li><a href=""><span class="color"></span></a></li>
+            </ul>
+            <div class="reset">
+                <div class="pause_btn off"><img src="./images/ico_kv_pause.png" alt=""></div>
+                <div class="start_btn on"><img src="./images/ico_kv_play.png" alt=""></div>
+            </div>
+        </div>
+        <div class="main_cursor cf">
+            <div class="cursor_left"></div>
+            <div class="cursor_right"></div>
+            <div class="cursor"></div>
+        </div>
+    </section>
+    <section id="content">
+      <div class="content_cover">
+        <ul>
+          <li><a href="#" data-text="계열사"><img src="images/ico_int_1.png" alt="" class="leave"><img src="images/ico_int_1_on.gif" alt="" class="hover"></a></li>
+          <li><a href="#" data-text="두산뉴스룸"><img src="images/ico_int_2.png" alt="" class="leave"><img src="images/ico_int_2_on.gif" alt="" class="hover"></a></li>
+          <li><a href="#" data-text="브랜드 활약상"><img src="images/ico_int_3.png" alt="" class="leave"><img src="images/ico_int_3_on.gif" alt="" class="hover"></a></li>
+          <li><a href="#" data-text="사업장 위치"><img src="images/ico_int_4.png" alt="" class="leave"><img src="images/ico_int_4_on.gif" alt="" class="hover"></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- //#content -->
+    <section id="media_center">
+      <div class="media_cover">
+        <ul>
+          <li>
+            <a href="#">
+              <img src="images/0dc4e114-18c5-4730-a6f5-b562cf92c806.jpg" alt="" class="c_img">
+              <p class="text">[보도자료] 두산인프라코어, 드론측량부터 장비운용까지...</p>
+              <img src="images/ico_over_arrow.png" alt="" class="arrow">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/7fe5a7e3-f03e-42bd-9ab6-952c0708aab0.jpg" alt="" class="c_img">
+              <p class="text">[보도자료] 두산중공업, 시노펙스와 손잡고 친환경수처리</p>
+              <img src="images/ico_over_arrow.png" alt="" class="arrow">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/8cfd1b42-e65e-4f32-b7ad-0cbe695e741c.jpg" alt="" class="c_img">
+              <p class="text">[보도자료] 두산,'파워젠 인터내셔널 2019' 참가</p>
+              <img src="images/ico_over_arrow.png" alt="" class="arrow">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/47950c97-c3d7-45ff-be02-410a04d16d65.jpg" alt="" class="c_img">
+              <p class="text">[보도자료] 두산, 인도네이사 현지에서 단독으로 '두산테크데스크'</p>
+              <img src="images/ico_over_arrow.png" alt="" class="arrow">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/be2914e1-6eb0-4041-a39b-7be3052ec239.jpg" alt="" class="c_img">
+              <p class="text">[보도자료] 두산,3개 은행과 함께 동반성장펀드 조성</p>
+              <img src="images/ico_over_arrow.png" alt="" class="arrow">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/0dc4e114-18c5-4730-a6f5-b562cf92c806.jpg" alt="" class="c_img">
+              <p class="text">[보도자료] 두산인프라코어, 드론측량부터 장비운용까지...</p>
+              <img src="images/ico_over_arrow.png" alt="" class="arrow">
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+    </section>
+    <!-- //#media_center -->
+    <section id="find">
+      <div class="find_cover cf">
+        <div class="find_left fl">
+          <h2 class="what_find">무엇을 찾으시나요?</h2>
+          <form action="#" method="post">
+            <input type="text" name="search" id="search" value="" placeholder="검색어를 입력하세요">
+            <a href="#"><img src="images/btn_search_arrow_black.png" alt=""></a>
+          </form>
+        </div>
+        <div class="find_right fl">
+          <div class="right_cover">
+            <ul>
+              <li><a href="#">두산의 활약상</a></li>
+              <li><a href="#">CI</a></li>
+              <li><a href="#">사업영역</a></li>
+              <li><a href="#">두산연강재단</a></li>
+              <li><a href="#">굴착기</a></li>
+              <li><a href="#">두산인프라코어</a></li>
+              <li><a href="#">사회책임경영</a></li>
+              <li><a href="#">주가정보</a></li>
+              <li><a href="#">두산뉴스룸</a></li>
+              <li><a href="#">인재상</a></li>
+              <li><a href="#">채용공고</a></li>
+              <li><a href="#">두산스토리</a></li>
+              <li><a href="#">두산모빌리티이노베이션</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--  //#find -->
+    <footer id="footer">
+      <div class="footer_cover cf">
+        <div class="foot_left">
+          <h2 class="f_logo cf">
+            <img src="images/logo_gnb.png" alt=""><img src="images/ico_youtube.png" alt="" class="on">
+          </h2>
+          <span>&copy; 2019 (주) 두산중공업</span>
+        </div>
+        <div class="foot_center">
+          <ul class="cf">
+            <li><a href="#">Contact is</a></li>
+            <li><a href="#">사업장 위치</a></li>
+            <li><a href="#">법적고지</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+            <li><a href="#">사이트맵</a></li>
+          </ul>
+        </div>
+        <div class="foot_right">
+          <img src="images/ico_youtube.png" alt="">
+        </div>
+      </div>
+  
+    </footer>
+  </body>
+  
+  </html>
